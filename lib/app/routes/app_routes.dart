@@ -5,10 +5,14 @@ abstract class Routes {
   Routes._();
   static const HOME = _Paths.HOME;
   static const SIGNINPAGE = _Paths.SIGNINPAGE;
+  static const DASHBOARD_CLIENT = _Paths.DASHBOARD_CLIENT;
+  static const LAYANAN_SURAT = _Paths.LAYANAN_SURAT;
 }
 
 abstract class _Paths {
   _Paths._();
   static const HOME = '/home';
   static const SIGNINPAGE = '/signinpage';
+  static const DASHBOARD_CLIENT = '/dashboard-client';
+  static const LAYANAN_SURAT = '/layanan-surat';
 }

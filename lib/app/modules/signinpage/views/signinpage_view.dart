@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:si_desa_care/app/routes/app_pages.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -10,7 +12,9 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
   bool _isPasswordVisible = false;
   bool _rememberMe = false;
+  // ignore: unused_field
   String _nik = '';
+  // ignore: unused_field
   String _password = '';
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -120,7 +124,7 @@ class _SignInPageState extends State<SignInPage> {
                       decoration: InputDecoration(
                         labelText: 'Password',
                         hintText: 'Masukkan password anda',
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.lock_outline_rounded,
                         ),
                         labelStyle: TextStyle(color: Colors.grey),
@@ -201,7 +205,7 @@ class _SignInPageState extends State<SignInPage> {
                         ),
                         onPressed: () {
                           if (_formKey.currentState?.validate() ?? false) {
-                            // Perform the sign-in action here
+                            Get.offAndToNamed(Routes.DASHBOARD_CLIENT);
                           }
                         },
                       ),
