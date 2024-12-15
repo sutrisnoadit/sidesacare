@@ -98,7 +98,7 @@ class DashboardClientView extends StatelessWidget {
                   icon: Icons.query_stats_outlined,
                   title: 'Cek Status Surat',
                   onTap: () =>
-                      Get.to(() => PlaceholderPage(title: 'Cek Status Surat')),
+                      Get.toNamed(Routes.CEK_SURAT),
                 ),
                 MenuItem(
                   icon: Icons.question_answer_outlined,

@@ -7,6 +7,7 @@ abstract class Routes {
   static const SIGNINPAGE = _Paths.SIGNINPAGE;
   static const DASHBOARD_CLIENT = _Paths.DASHBOARD_CLIENT;
   static const LAYANAN_SURAT = _Paths.LAYANAN_SURAT;
+  static const CEK_SURAT = _Paths.CEK_SURAT;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const SIGNINPAGE = '/signinpage';
   static const DASHBOARD_CLIENT = '/dashboard-client';
   static const LAYANAN_SURAT = '/layanan-surat';
+  static const CEK_SURAT = '/cek-surat';
 }
