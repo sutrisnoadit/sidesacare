@@ -5,7 +5,7 @@ import 'package:si_desa_care/app/routes/app_pages.dart';
 
 // ignore: unused_import
 import '../controllers/dashboard_client_controller.dart';
-
+import '../../../components/menu_item.dart';
 
 class DashboardClientView extends StatelessWidget {
   @override
@@ -86,40 +86,40 @@ class DashboardClientView extends StatelessWidget {
               crossAxisCount: 2,
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.all(20),
               children: [
                 MenuItem(
-                  icon: Icons.email,
+                  icon: Icons.email_outlined ,
                   title: 'Layanan Surat',
                   onTap: () =>
                       Get.toNamed(Routes.LAYANAN_SURAT),
                 ),
                 MenuItem(
-                  icon: Icons.question_mark,
+                  icon: Icons.query_stats_outlined,
                   title: 'Cek Status Surat',
                   onTap: () =>
                       Get.to(() => PlaceholderPage(title: 'Cek Status Surat')),
                 ),
                 MenuItem(
-                  icon: Icons.chat,
-                  title: 'Layanan Pengaduan Warga',
+                  icon: Icons.question_answer_outlined,
+                  title: 'Layanan Pengaduan',
                   onTap: () => Get.to(
-                      () => PlaceholderPage(title: 'Layanan Pengaduan Warga')),
+                      () => PlaceholderPage(title: 'Layanan Pengaduan')),
                 ),
                 MenuItem(
-                  icon: Icons.campaign,
+                  icon: Icons.campaign_outlined,
                   title: 'Pengumuman',
                   onTap: () =>
                       Get.to(() => PlaceholderPage(title: 'Pengumuman')),
                 ),
                 MenuItem(
-                  icon: Icons.bar_chart,
+                  icon: Icons.bar_chart_sharp,
                   title: 'Statistik',
                   onTap: () =>
                       Get.to(() => PlaceholderPage(title: 'Statistik')),
                 ),
                 MenuItem(
-                  icon: Icons.info,
+                  icon: Icons.info ,
                   title: 'Informasi',
                   onTap: () =>
                       Get.to(() => PlaceholderPage(title: 'Informasi')),
@@ -128,59 +128,6 @@ class DashboardClientView extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class MenuItem extends StatelessWidget {
-  final IconData icon;
-  final String title;
-  final VoidCallback onTap;
-
-  MenuItem({required this.icon, required this.title, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
-              spreadRadius: 2,
-              blurRadius: 6,
-              offset: Offset(0, 3),
-            ),
-          ],
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              height: 110,
-              width: 110,
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                shape: BoxShape.circle,
-              ),
-              child: Icon(icon, size: 40, color: Colors.white),
-            ),
-            SizedBox(height: 10),
-            Text(
-              title,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }
