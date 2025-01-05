@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "818473001596",
+    "project_id": "sidesa-5cd04",
+    "storage_bucket": "sidesa-5cd04.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818473001596:android:98541a8113c57b2bd81ff9",
+        "android_client_info": {
+          "package_name": "com.example.si_desa_care"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA0tQxrsdRwDKfQacwjSQlJ1QKAFjpqvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

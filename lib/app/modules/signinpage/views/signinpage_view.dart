@@ -205,10 +205,40 @@ class _SignInPageState extends State<SignInPage> {
                         ),
                         onPressed: () {
                           if (_formKey.currentState?.validate() ?? false) {
-                            Get.offAndToNamed(Routes.DASHBOARD_CLIENT);
+                            Get.toNamed(Routes.DASHBOARD_CLIENT);
                           }
                         },
                       ),
+                    
+                    ),
+                    _gap(),
+                     SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue[600],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            'Sign In admoon',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        onPressed: () {
+                          if (_formKey.currentState?.validate() ?? false) {
+                            Get.toNamed(Routes.ADMIN_DASHBOARD);
+                          }
+                        },
+                      ),
+                    
                     ),
                   ],
                 ),
